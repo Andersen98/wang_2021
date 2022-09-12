@@ -1,3 +1,5 @@
+
+import numpy as np
 def field_strength_of_mode(k, lambda_c, number:int):
     """
     Inputs:
@@ -19,8 +21,19 @@ def field_strength_of_mode(k, lambda_c, number:int):
     """
     pass
 
-def cavity_strength(volume):
+def field_strength_of_mode(energy,volume,epsilon):
     """
-    Cavity strength as a function of volume.
-    Solves eqns 3,4,
+    Gives the field strength magnitude of a field mode 
+    given energy and volume.
+
+    **NOTE THAT THIS IS 3D CASE**
+
+    Inputs:
+        energy (float): positive real, can be hbar omega, or h*f
+        volume (float): positive real, 3d volume of mode
+        epsilon (float): whatever epsilon is in your units/system
+
+    Outputs:
+        field magnitude (float): Equation 1.1.20 of Scully and Zubairy, Quantum Optics.
     """
+    return np.sqrt(energy/(2*epsilon*volume))
