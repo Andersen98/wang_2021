@@ -5,6 +5,7 @@ __pycache__/
 
 #pyscf
 *.xyz
+tmp*
 
 # C extensions
 *.so
